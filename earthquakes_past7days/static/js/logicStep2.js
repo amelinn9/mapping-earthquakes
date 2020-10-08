@@ -101,11 +101,15 @@ d3.json(earthquakes).then(function(data) {
     onEachFeature: function(feature, layer) {
     console.log(layer);
     layer.bindPopup("<h3>Location: " + feature.properties.place + "</h3> <hr> <h3>Magnitude: " +
-    feature.properties.mag + "</h3> <h3>Date: " + new Date(feature.properties.time) + "</h3>");
+    feature.properties.mag + "</h3>");
     }
   }).addTo(map);
 });
 
+
+//let myTime = new Date(features.properties.time *1000);
+//console.log(myTime);
+// <h3>Date: " + feature.properties.time(myTime.toLocaleString()) + </h3>
 
 
 // FOR line markers
